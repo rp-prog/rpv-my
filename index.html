@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R.P.V. · Malaysia | Coming soon</title>
+  <meta name="description" content="R.P.V. Malaysia is launching soon — Bursa Malaysia market insights, a trading rebate service, and a financial education app. Information only, not investment advice.">
+  <meta name="theme-color" content="#06101e">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://rpv.my/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="R.P.V. Malaysia">
+  <meta property="og:title" content="R.P.V. · Malaysia | Coming soon">
+  <meta property="og:description" content="Launching soon — Bursa Malaysia market insights, a trading rebate service, and a financial education app.">
+  <meta property="og:url" content="https://rpv.my/">
+  <meta property="og:locale" content="en_MY">
+  <meta property="og:locale:alternate" content="ms_MY">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="R.P.V. · Malaysia | Coming soon">
+  <meta name="twitter:description" content="Launching soon — Bursa Malaysia market insights, a trading rebate service, and a financial education app.">
+  <style>
+    :root {
+      --ink: #e8eef6;
+      --void: #040914;
+      --deep: #06101e;
+      --navy: #0a1a36;
+      --gold: #c9b07a;
+      --gold-2: #e4d0a0;
+      --stone: rgba(232, 238, 246, 0.68);
+      --line: rgba(155, 183, 212, 0.18);
+      --panel: rgba(10, 26, 54, 0.72);
+      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 78% 0%, rgba(155, 183, 212, 0.16), transparent 52%),
+        radial-gradient(ellipse 60% 40% at 12% 100%, rgba(201, 176, 122, 0.08), transparent 48%),
+        linear-gradient(180deg, #040914 0%, #06101e 48%, #0a1a36 100%);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.22em;
+    }
+
+    a:hover { color: var(--gold-2); }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--gold-2);
+      outline-offset: 3px;
+    }
+
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      z-index: 20;
+      padding: 8px 14px;
+      background: var(--gold);
+      color: var(--deep);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transform: translateY(-160%);
+    }
+
+    .skip:focus { transform: none; }
+
+    .wrap {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .rings {
+      position: fixed;
+      inset: auto -8% auto auto;
+      top: 8%;
+      width: min(46vw, 520px);
+      height: min(46vw, 520px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .rings span {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(155, 183, 212, 0.14);
+      border-radius: 50%;
+    }
+
+    .rings span:nth-child(1) { inset: 16%; }
+    .rings span:nth-child(2) { inset: 4%; }
+    .rings span:nth-child(3) { inset: -10%; }
+    .rings span:nth-child(4) { inset: -24%; }
+
+    header {
+      position: relative;
+      z-index: 2;
+      padding: 22px 0 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand:hover { color: #fff; }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-logo {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+    }
+
+    .brand-sub {
+      margin-top: 5px;
+      font-size: 9px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--gold-2);
+    }
+
+    .header-contact {
+      border: 1px solid var(--gold);
+      color: var(--gold-2);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 10px 16px;
+    }
+
+    .header-contact:hover {
+      background: var(--gold);
+      color: var(--deep);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 0 48px;
+    }
+
+    .hero { max-width: 740px; }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--gold-2);
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-bottom: 28px;
+    }
+
+    .kicker::before,
+    .kicker::after {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.7;
+    }
+
+    .kicker::before { width: 24px; }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #fff;
+    }
+
+    .logo-letters {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(64px, 12vw, 120px);
+      letter-spacing: 0.06em;
+      line-height: 0.9;
+    }
+
+    .logo-name {
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+      color: var(--gold-2);
+      font-weight: 400;
+    }
+
+    .tagline {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3.2vw, 32px);
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+      margin: 28px 0 8px;
+      line-height: 1.25;
+    }
+
+    .tagline-bm {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--gold-2);
+      margin: 0 0 22px;
+    }
+
+    .lead {
+      max-width: 58ch;
+      color: var(--stone);
+      font-size: 1.05rem;
+      margin-bottom: 48px;
+    }
+
+    .offerings {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .offerings li {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 26px 24px 28px;
+    }
+
+    .offerings h2 {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .offerings p {
+      color: var(--stone);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--line);
+      padding: 22px 0 28px;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .disclaimer {
+      flex-basis: 100%;
+      margin-top: 4px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.48);
+    }
+
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--gold-2); }
+
+    @media (max-width: 800px) {
+      .rings { opacity: 0.28; }
+      .offerings { grid-template-columns: 1fr; }
+      main { padding: 40px 0 36px; justify-content: flex-start; }
+      .logo-letters { letter-spacing: 0.04em; }
+      .kicker::before, .kicker::after { width: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .wrap { width: min(1080px, calc(100% - 28px)); }
+      .brand img { width: 34px; height: 34px; }
+      .header-contact { padding: 8px 12px; }
+      .lead { font-size: 1rem; margin-bottom: 32px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="rings" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-current="page">
+        <img src="favicon.svg" width="40" height="40" alt="">
+        <span class="brand-text">
+          <span class="brand-logo">R.P.V.</span>
+          <span class="brand-sub">Malaysia</span>
+        </span>
+      </a>
+      <a class="header-contact" href="mailto:info@rpvholdings.com">Contact</a>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="site-title">
+        <p class="kicker">Launching soon</p>
+        <h1 id="site-title">
+          <span class="logo-letters">R.P.V.</span>
+          <span class="logo-name">Malaysia</span>
+        </h1>
+        <p class="tagline">For the Malaysian stock market</p>
+        <p class="tagline-bm" lang="ms">Untuk pasaran saham Malaysia.</p>
+        <p class="lead">We are launching soon — market insights on Bursa Malaysia, a trading rebate service, and a financial education app. Built for Malaysia.</p>
+      </section>
+      <ul class="offerings">
+        <li>
+          <h2>Bursa Malaysia</h2>
+          <p>Market insights and information on Malaysia’s stock exchange.</p>
+        </li>
+        <li>
+          <h2>Trading rebates</h2>
+          <p>A rebate service that returns cashback on broker commissions as you trade.</p>
+        </li>
+        <li>
+          <h2>Learning app</h2>
+          <p>A financial education app and academy for clearer, more disciplined learning.</p>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <p><a href="https://www.rpvholdings.com">© 2026 R.P.V. Holdings Ltd</a></p>
+      <p><a href="mailto:info@rpvholdings.com">info@rpvholdings.com</a></p>
+      <p class="disclaimer">Information only, not investment advice.</p>
+    </div>
+  </footer>
+</body>
+</html>
